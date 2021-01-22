@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Add CSS styling here */
+
+* {
+	box-sizing: border-box;
+	text-decoration: none;
+	width: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.container {
+	border: solid black 1px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url(https://background-tiles.com/overview/white/textures/large/5002.png);
+	font-family: "Lobster", cursive;
+	/* width: 80%; */
+}
+
+.nav-bar {
+	background-color: rgb(80, 80, 80);
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.25)
+	);
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding: 1rem;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	box-shadow: 0 0.5rem 1rem black;
+}
+
+.nav-bar h1 {
+	text-shadow: rgb(81, 97, 196) 1px 1px 0.5rem;
+	font-weight: bold;
+	font-size: 6rem;
+	width: 50%;
+}
+
+.nav-bar h1:hover {
+    text-shadow:gold 1px 1px .5rem;
+    color: rgb(81,97,196);
+}
+
+.right-nav {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	font-size: 2rem;
+	background-color: rgb(81, 97, 196);
+	border: solid black;
+	box-shadow: 0 0 0 0.4rem inset white;
+	padding: 0.5rem;
+	width: 50%;
+}
+
+.right-nav a:hover {
+    background-color: gold;
+}
+
+.nav-bar a {
+	border: solid black 2px;
+	color: white;
+	display: flex;
+	width: 25%;
+	align-items: center;
+	justify-content: center;
+	padding: 0 5vw;
+	font-size: 3rem;
+}
+
+/* Call to Action */
+.cta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(80, 80, 80);
+	border-radius: 5rem;
+	width: 80%;
+	height: 40vw;
+	margin: 2rem 0;
+}
+
+.cta img {
+	display: flex;
+	border-radius: 5rem;
+	width: 100%;
+	height: 40vw;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.25)
+	);
+	box-shadow: 0.2rem 0.2rem 1.25rem black, -0.2rem -0.2rem 1.25rem black;
+}
+
+.cta h2 {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	margin-bottom: 20%;
+	opacity: 0.75;
+	text-shadow: white 1px 1px 0.5rem;
+	font-size: 5vw;
+	width: 100%;
+}
+
+.cta a {
+	position: absolute;
+	background-color: white;
+	font-style: italic;
+	color: black;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.25)
+	);
+	opacity: 0.5;
+	border-top-left-radius: 2vw;
+	border-bottom-right-radius: 2vw;
+	padding: 0.5vw 1vw;
+	margin-bottom: 10%;
+	font-size: 3vw;
+	width: 19%;
+}
+
+/* Central Section (where the cards are) */
+.meat-and-potatoes {
+	width: 100%;
+	padding: 0.25rem;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: wrap;
+}
+
+.card {
+	background-color: rgb(80, 80, 80);
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.25)
+	);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	height: 30vw;
+	margin-bottom: 2rem;
+	box-shadow: 0.2rem 0.2rem 1.25rem black, -0.2rem -0.2rem 1.25rem black;
+}
+
+.card img {
+	width: 100%;
+}
+
+.card p {
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	width: 100%;
+	font-size: 2vw;
+}
+
+/* Footer */
+footer {
+	background-color: rgb(80, 80, 80);
+	width: 100%;
+	height: 10vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact-me {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 50%;
+	height: 10vw;
+	margin-left: 2vw;
+}
+.contact-me-message {
+	color: white;
+	background-color: rgb(180, 180, 180);
+	border-radius: 15%;
+	padding: 3vw;
+	font-size: 2vw;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.25)
+	);
+	box-shadow: 0.2rem 0.2rem 0.75rem black, -0.2rem -0.2rem 0.75rem black;
+	width: 30%;
+}
+
+.contact-me-message:hover {
+    background-color:  rgb(81,97,196);
+    color: rgb(180, 180, 180);
+    box-shadow: .2rem .2rem .75rem gold,
+                -0.2rem -0.2rem .75rem gold;
+}
+
+.links {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 50%;
+	height: 10vw;
+}
+
+.links img {
+	height: 9vw;
+	width: 9vw;
+}
+
+/* Media tags - Desktop First Approach  */                      /* MVP */
+@media (max-width: 800px) {
+    /* .nav-bar {
+        flex-direction: column;
+	}
+	.nav-bar h1 {
+		font-size: 6rem;
+		width: 100%;
+    }
+    
+    .meat-and-potatoes{
+        width: 78%;
+    }
+    .card {
+        width: 40%;
+    }
+
+	.right-nav {
+        width: 25%;
+        flex-direction: column;
+        align-items: center;
+	}
+	.nav-bar a {
+        font-size: 1.6rem;
+        width: 100%;
+    } */
+}
+
+@media (max-width: 500px) {
+	/* .nav-bar {
+		flex-direction: column;
+	}
+	.nav-bar h1 {
+		font-size: 2.5rem;
+		width: 100%;
+		align-items: center;
+		width: 100%;
+    }
+    
+    .meat-and-potatoes{
+        width: 78%;
+    }
+    .card {
+        width: 40%;
+    }
+
+	.right-nav {
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+	}
+	.nav-bar a {
+        font-size: 1.6rem;
+        width: 100%;
+    } */
+}
+
+/* Media tags - Mobile First Approach */
+@media (min-width: 240px) and (min-height: 300px) {
+    .nav-bar {
+		flex-direction: column;
+	}
+	.nav-bar h1 {
+		font-size: 2.62rem;
+		width: 100%;
+		align-items: flex-end;
+    }
+    
+    .meat-and-potatoes{
+        width: 78%;
+    }
+    .card {
+        width: 40%;
+    }
+
+	.right-nav {
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+	}
+	.nav-bar a {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 320px) and (min-height: 568px) {
+    .nav-bar {
+		flex-direction: column;
+	}
+	.nav-bar h1 {
+		font-size: 3.5rem;
+		width: 100%;
+		align-items: flex-end;
+    }
+    
+    .meat-and-potatoes{
+        width: 78%;
+    }
+    .card {
+        width: 40%;
+    }
+
+	.right-nav {
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+	}
+	.nav-bar a {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 375px) and (min-height: 667px) {
+    .nav-bar {
+		flex-direction: column;
+	}
+	.nav-bar h1 {
+		font-size: 4.25rem;
+		width: 100%;
+		align-items: flex-end;
+    }
+    
+    .meat-and-potatoes{
+        width: 78%;
+    }
+    .card {
+        width: 40%;
+    }
+
+	.right-nav {
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+	}
+	.nav-bar a {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 414px) and (min-height: 736px) {
+    .nav-bar {
+		flex-direction: column;
+	}
+	.nav-bar h1 {
+		font-size: 4.71rem;
+		width: 100%;
+		align-items: flex-end;
+    }
+    
+    .meat-and-potatoes{
+        width: 78%;
+    }
+    .card {
+        width: 40%;
+    }
+
+	.right-nav {
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+	}
+	.nav-bar a {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 375px) and (min-height: 812px) {
+    .nav-bar {
+		flex-direction: column;
+	}
+	.nav-bar h1 {
+		font-size: 4.25rem;
+		width: 100%;
+		align-items: flex-end;
+    }
+    
+    .meat-and-potatoes{
+        width: 78%;
+    }
+    .card {
+        width: 40%;
+    }
+
+	.right-nav {
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+	}
+	.nav-bar a {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 500px) and (min-height: 700px) {
+    .nav-bar {
+		flex-direction: column;
+	}
+	.nav-bar h1 {
+		width: 100%;
+        align-items: flex-end;
+        font-size: 6.16rem;
+	}
+
+	.right-nav {
+		width: 15%;
+	}
+	.nav-bar a {
+		font-size: 2rem;
+    }
+    
+}
+
+@media (min-width: 768px) and (min-height: 1024px) {
+    .nav-bar {
+		flex-direction: column;
+	}
+	.nav-bar h1 {
+		font-size: 8.5rem;
+		width: 100%;
+		align-items: flex-end;
+    }
+    
+    .meat-and-potatoes{
+        width: 78%;
+    }
+    .card {
+        width: 40%;
+    }
+
+	.right-nav {
+        width: 15%;
+        flex-direction: column;
+        align-items: center;
+	}
+	.nav-bar a {
+        font-size: 3rem;
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 1024px) and (min-height: 1366px) {
+    .nav-bar {
+		flex-direction: column;
+	}
+	.nav-bar h1 {
+		font-size: 12rem;
+		width: 100%;
+		align-items: flex-end;
+    }
+    
+    .meat-and-potatoes{
+        width: 78%;
+    }
+    .card {
+        width: 40%;
+    }
+
+	.right-nav {
+        width: 15%;
+        flex-direction: column;
+        align-items: center;
+	}
+	.nav-bar a {
+        font-size: 3.5rem;
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 1280px) and (min-height: 800px) {
+	.nav-bar {
+        flex-direction: row;
+        padding-bottom: 3rem
+	}
+	.nav-bar h1 {
+		width: 88.5%;
+		align-items: flex-start;
+		font-size: 17rem;
+	}
+
+	.right-nav {
+        width: 11.5%;
+        justify-content: center;
+	}
+	.nav-bar a {
+		font-size: 3rem;
+    }
+    
+	.contact-me-message {
+		width: 31%;
+	}
+}
+
+@media (min-width: 1920px) and (min-height: 1080px) {
+    .nav-bar{
+        padding-bottom: 5rem;
+    }
+    
+    .nav-bar h1 {
+		flex-direction: row;
+		width: 85%;
+		font-size: 25.5rem;
+	}
+	.right-nav {
+        width: 15%;
+        justify-content: center;
+	}
+	.nav-bar a {
+        font-size: 5rem;
+    }
+    
+}
